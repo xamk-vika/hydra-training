@@ -19,7 +19,7 @@ class SimpleHTTPRequestHandler(BaseHTTPRequestHandler):
                 self.end_headers()
                 self.wfile.write(b'Login successful!')
             else:
-                self.send_response(401)
+                self.send_response(403)
                 self.end_headers()
                 self.wfile.write(b'403 Forbidden: Invalid username or password')
         else:
